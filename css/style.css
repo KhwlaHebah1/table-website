@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: gold;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+}
+
+.hero h1 {
+    font-size: 54px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 25px;
+    max-width: 700px;
+    color: #f0f0f0;
+}
+
+.hero button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: gold;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.hero button:hover {
+    opacity: 0.9;
+}
+
+.packages {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.packages h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: gold;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    height: 360px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.12);
+    transition: transform 0.3s ease;
+    background-color: #1c1c1c;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+}
+
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    text-align: left;
+}
+
+.card-content h3 {
+    margin-bottom: 8px;
+    color: gold;
+    font-size: 24px;
+}
+
+.card-content p {
+    font-size: 15px;
+    color: white;
+}
+
+.contact {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #000;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #000;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px 40px;
+}
+
+.video-section video {
+    width: 420px;
+    max-width: 90%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.12);
+}
